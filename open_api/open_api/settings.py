@@ -129,4 +129,5 @@ SPECTACULAR_SETTINGS = {
     'DESCRIPTION': 'Django から生成したOpenAPIです',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
+    'CAMELIZE_NAMES': True,
 }

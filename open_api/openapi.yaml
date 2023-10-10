@@ -6,9 +6,9 @@ info:
 paths:
   /api/v1/todo/:
     get:
-      operationId: api_v1_todo_list
+      operationId: v1TodoList
       tags:
-      - api
+      - v1
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -23,9 +23,9 @@ paths:
                   $ref: '#/components/schemas/Todo'
           description: ''
     post:
-      operationId: api_v1_todo_create
+      operationId: v1TodoCreate
       tags:
-      - api
+      - v1
       requestBody:
         content:
           application/json:
@@ -51,7 +51,7 @@ paths:
           description: ''
   /api/v1/todo/{id}/:
     get:
-      operationId: api_v1_todo_retrieve
+      operationId: v1TodoRetrieve
       parameters:
       - in: path
         name: id
@@ -60,7 +60,7 @@ paths:
         description: A unique integer value identifying this todo.
         required: true
       tags:
-      - api
+      - v1
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -73,7 +73,7 @@ paths:
                 $ref: '#/components/schemas/Todo'
           description: ''
     put:
-      operationId: api_v1_todo_update
+      operationId: v1TodoUpdate
       parameters:
       - in: path
         name: id
@@ -82,7 +82,7 @@ paths:
         description: A unique integer value identifying this todo.
         required: true
       tags:
-      - api
+      - v1
       requestBody:
         content:
           application/json:
@@ -107,7 +107,7 @@ paths:
                 $ref: '#/components/schemas/Todo'
           description: ''
     patch:
-      operationId: api_v1_todo_partial_update
+      operationId: v1TodoPartialUpdate
       parameters:
       - in: path
         name: id
@@ -116,7 +116,7 @@ paths:
         description: A unique integer value identifying this todo.
         required: true
       tags:
-      - api
+      - v1
       requestBody:
         content:
           application/json:
@@ -140,7 +140,7 @@ paths:
                 $ref: '#/components/schemas/Todo'
           description: ''
     delete:
-      operationId: api_v1_todo_destroy
+      operationId: v1TodoDestroy
       parameters:
       - in: path
         name: id
@@ -149,7 +149,7 @@ paths:
         description: A unique integer value identifying this todo.
         required: true
       tags:
-      - api
+      - v1
       security:
       - cookieAuth: []
       - basicAuth: []
